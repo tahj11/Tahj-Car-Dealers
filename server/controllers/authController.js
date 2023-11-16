@@ -29,7 +29,42 @@ exports.registerUser = async (req, res) => {
       role: role || Roles.USER, //Set dafault role to USER if not provided
       profilePicture,
     });
+
+    //Save the user to the database
+    const savedUser = await newUser.save();
+
+    res.json(savedUser);
   } catch (err) {
     console.log("Error registering user: ", err);
+  }
+};
+
+exports.loginUser = async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const user = await User.findOne({ email });
+
+    if (!user) {
+      return res.status(401).json({ message: "Invalid email or password" });
+    }
+
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+
+    if (!isPasswordValid) {
+      return res.status(401).json({ message: "Invalid email or password" });
+    }
+
+    const accessToken = jwt.sign(
+      { userId: user, role: user.role },
+      process.env.JWT_SECRET,
+      { expiresIn: "1h" }
+    );
+
+    const { ...others } = user._doc;
+
+    res.status(200).json({ ...others, accessToken });
+  } catch (err) {
+    console.log("Error upon user login: ", err);
   }
 };
