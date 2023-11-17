@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const authRoute = require("./routes/authRoutes");
 const userRoute = require("./routes/userRoutes");
+const protectedRoute = require("./routes/protectedRoutes");
 dotenv.config();
 
 mongoose
@@ -18,6 +19,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
+app.use("/api/protected", protectedRoute);
 
 app.listen(process.env.PORT || 5005, () => {
   console.log("Backend server is running");
