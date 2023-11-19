@@ -55,7 +55,19 @@ exports.registerAndUploadProfilePicture = async (req, res) => {
         .json({ message: "User with this email already exists" });
     }
 
-    //Hash the password
+    if (!firstName) {
+      return res.status(400).json({ message: "First Name is required" });
+    }
+
+    if (!lastName) {
+      return res.status(400).json({ message: "Last Name is required" });
+    }
+
+    if (!email) {
+      return res.status(400).json({ message: "Email is required" });
+    }
+
+    // Hash the password
     const saltRounds = 10;
     const hashPassword = await bcrypt.hash(password, saltRounds);
 
@@ -68,31 +80,55 @@ exports.registerAndUploadProfilePicture = async (req, res) => {
       role: role || Roles.USER, // Set default role to USER if no role is provided
     });
 
-    //Save the user to the database
-    const savedUser = await newUser.save();
-    // Assuming the new user is stored in newUser
-    const userId = newUser._id;
+    try {
+      // Save the user to the database
+      const savedUser = await newUser.save();
+      // Assuming the new user is stored in newUser
+      const userId = newUser._id;
 
-    // Profile picture upload logic
-    const profilePicture = req.file.filename;
+      // Profile picture upload logic
+      let profilePicture;
+      try {
+        profilePicture = req.file.filename;
+      } catch (uploadError) {
+        console.error("Profile picture upload failed:", uploadError);
+        return res.status(500).json({
+          message: "Profile picture upload failed",
+          error: uploadError.message,
+        });
+      }
 
-    // Update the user's profile picture field
-    const updatedUser = await User.findByIdAndUpdate(
-      userId,
-      { profilePicture },
-      { new: true }
-    );
+      // Update the user's profile picture field
+      const updatedUser = await User.findByIdAndUpdate(
+        userId,
+        { profilePicture },
+        { new: true }
+      );
 
-    if (!updatedUser) {
-      return res.status(404).json({ message: "User not found" });
+      if (!updatedUser) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      res.status(200).json({
+        message: "Registration and profile picture upload successful",
+        user: updatedUser,
+      });
+    } catch (validationError) {
+      // Check for specific validation errors and return corresponding messages
+      if (validationError.name === "ValidationError") {
+        const validationErrors = Object.values(validationError.errors).map(
+          (err) => err.message
+        );
+        console.log(validationErrors);
+        return res
+          .status(400)
+          .json({ message: "Validation error", errors: validationErrors });
+      } else {
+        throw validationError; // Rethrow the error if it's not a validation error
+      }
     }
-
-    res.json({
-      message: "Registration and profile picture upload successful",
-      user: updatedUser,
-    });
   } catch (error) {
-    // console.error(error);
+    console.error(error);
     res.status(500).json({
       message: "Error during registration or profile picture upload",
       error: error.message,

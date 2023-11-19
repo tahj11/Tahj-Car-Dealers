@@ -15,7 +15,18 @@ router.post("/login", authController.loginUser);
 router.post(
   "/register",
   upload.single("profilePicture"),
-  authController.registerAndUploadProfilePicture
+  (req, res, next) => {
+    console.log("Request body:", req.body);
+    console.log("Request file:", req.file);
+
+    authController.registerAndUploadProfilePicture(req, res).catch(next);
+  },
+  (err, req, res, next) => {
+    console.error("Error in /register endpoint:", err);
+    res
+      .status(500)
+      .json({ message: "Internal Server Error", error: err.message });
+  }
 );
 
 module.exports = router;
