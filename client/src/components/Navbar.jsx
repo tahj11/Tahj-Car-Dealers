@@ -14,7 +14,13 @@ const Navbar = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
   return (
     <chakra.header id="header">
-      <Flex w="100%" px="20" py="5" align="center" justify="space-between">
+      <Flex
+        w="100%"
+        px={isMobile ? "5" : "20"}
+        py="5"
+        align="center"
+        justify="space-between"
+      >
         {/* Logo */}
         <Logo />
         {/* Nav Items */}

@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import BmwLineUp from "../components/BmwLineUp";
 import Banner from "../components/Banner";
+import History from "../components/History";
+import AlphaRacer from "../components/AlphaRacer";
 
 const Home = () => {
   return (
@@ -11,6 +13,8 @@ const Home = () => {
       <HeroSection />
       <Banner />
       <BmwLineUp />
+      <History />
+      <AlphaRacer />
     </div>
   );
 };

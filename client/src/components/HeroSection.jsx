@@ -1,9 +1,10 @@
 import React from "react";
-import { Box, Button, Text } from "@chakra-ui/react";
+import { Box, Button, Text, useMediaQuery } from "@chakra-ui/react";
 import BMW_Logo from "../assets/BMW-logo.mp4";
 import Afla from "../assets/Alfa-Romeo-intro.mp4";
 
 const HeroSection = () => {
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
   return (
     <Box height="90vh" width="100%" overflow="hidden" pos="relative">
       <video
@@ -24,18 +25,23 @@ const HeroSection = () => {
       <Box
         pos="absolute"
         color="white"
-        top="10%"
-        left="10"
-        fontSize="70px"
+        top={isMobile ? "10px" : "10%"}
+        left={isMobile ? "6" : "10"}
+        fontSize={isMobile ? "50px" : "70px"}
         fontWeight=""
         letterSpacing="1px"
-        lineHeight="80px"
+        lineHeight={isMobile ? "50px" : "80px"}
       >
         <h1>
           Alfa
           <br /> Romeo V12
         </h1>
-        <Text fontSize="25px" lineHeight="30px" mt="5rem">
+        <Text
+          fontSize={isMobile ? "18px" : "25px"}
+          lineHeight="30px"
+          mt={isMobile ? "3rem" : "5rem"}
+          mb={isMobile ? "2rem" : ""}
+        >
           Packed with power and made to maneuver, Alpha Romeo <br />
           excels on the track and in the street. And after four decades of
           thrills,
@@ -48,7 +54,7 @@ const HeroSection = () => {
           borderRadius="2px"
           padding="30px"
           variant="solid"
-          mt="4rem"
+          mt={isMobile ? "1.5rem" : "4rem"}
         >
           Explore Models
         </Button>
