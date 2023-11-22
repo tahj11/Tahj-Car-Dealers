@@ -5,6 +5,7 @@ import Afla from "../assets/Alfa-Romeo-intro.mp4";
 
 const HeroSection = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
+
   return (
     <Box height="90vh" width="100%" overflow="hidden" pos="relative">
       <video

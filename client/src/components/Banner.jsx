@@ -1,24 +1,31 @@
 import React from "react";
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, useMediaQuery } from "@chakra-ui/react";
 import { FaArrowDown } from "react-icons/fa";
 
 const Banner = () => {
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
+
   return (
     <Flex
       h="70px"
       background="#f0fff0"
-      align="center"
+      alignItems="center"
       gap="50px"
       justify="center"
       fontWeight="bold"
+      overflowX={isMobile && "auto"}
+      overflowY={isMobile && "hidden"}
     >
       <Box
         display="flex"
         justifyContent="center"
         alignItems="center"
         gap="10px"
+        // bg="gray"
       >
-        <Text fontSize="m">BMW M Line-Up</Text>
+        <Text fontSize="m" textAlign="center">
+          BMW M Line-Up
+        </Text>
         <FaArrowDown style={{ fontSize: "15px", color: "#3457D5" }} />
       </Box>
       <Box
