@@ -29,22 +29,23 @@ const MobileFooter = () => {
       <Flex
         direction="column"
         justify="space-between"
-        align="center"
+        // alignItems="center"
         maxW="1200px"
-        mx="auto"
+        // mx="5"
         mt="30px"
       >
-        <VStack spacing={4} textAlign="center">
+        <VStack spacing={4} textAlign="center" mx="auto">
           <Text fontSize="lg" fontWeight="bold">
             TAHJ.
           </Text>
         </VStack>
-        <Flex justifyContent="space-between" w="90%">
+        <Flex justifyContent="space-between" w="100%" ml="10px">
           <Text
             mt="auto"
             mb="auto"
             fontWeight="semibold"
-            fontSize="17px"
+            fontSize="15px"
+            fontFamily="Quicksand, sans-serif"
             color="	#282828"
           >
             TAHJ Services
@@ -64,6 +65,7 @@ const MobileFooter = () => {
             borderRadius="md"
             mt={4}
             textAlign="left"
+            align="start"
           >
             <Text>Home</Text>
             <Text>About</Text>
@@ -72,13 +74,14 @@ const MobileFooter = () => {
           </VStack>
         </Collapse>
 
-        <Flex justifyContent="space-between" w="90%">
+        <Flex justifyContent="space-between" w="100%" ml="10px">
           <Text
             mt="auto"
             mb="auto"
             fontWeight="semibold"
-            fontSize="17px"
+            fontSize="15px"
             color="	#282828"
+            fontFamily="Quicksand, sans-serif"
           >
             PartnerShips
           </Text>
@@ -95,8 +98,9 @@ const MobileFooter = () => {
             p={2}
             // border="1px solid #ddd"
             borderRadius="md"
-            mt={4}
-            textAlign="center"
+            mt="0px"
+            textAlign="left"
+            align="start"
           >
             <Text>Home</Text>
             <Text>About</Text>
@@ -105,13 +109,14 @@ const MobileFooter = () => {
           </VStack>
         </Collapse>
 
-        <Flex justifyContent="space-between" w="90%">
+        <Flex justifyContent="space-between" w="100%" ml="10px">
           <Text
             mt="auto"
             mb="auto"
             fontWeight="semibold"
-            fontSize="17px"
+            fontSize="15px"
             color="	#282828"
+            fontFamily="Quicksand, sans-serif"
           >
             Shopping Tools
           </Text>
@@ -129,7 +134,8 @@ const MobileFooter = () => {
             // border="1px solid #ddd"
             borderRadius="md"
             mt={4}
-            textAlign="center"
+            textAlign="left"
+            align="start"
           >
             <Text>Home</Text>
             <Text>About</Text>

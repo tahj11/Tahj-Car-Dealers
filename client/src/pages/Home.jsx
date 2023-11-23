@@ -4,12 +4,14 @@ import HeroSection from "../components/HeroSection";
 import BmwLineUp from "../components/BmwLineUp";
 import Banner from "../components/Banner";
 import History from "../components/History";
-import AlphaRacer from "../components/AlphaRacer";
 import ShowCase from "../components/ShowCase";
 import Footer from "../components/Footer";
 import MobileFooter from "../components/MobileFooter";
+import { useMediaQuery } from "@chakra-ui/react";
 
 const Home = () => {
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
+
   return (
     <div>
       <Navbar />
@@ -18,8 +20,7 @@ const Home = () => {
       <BmwLineUp />
       <History />
       <ShowCase />
-      {/* <AlphaRacer /> */}
-      <MobileFooter />
+      {isMobile ? <MobileFooter /> : <Footer />}
     </div>
   );
 };

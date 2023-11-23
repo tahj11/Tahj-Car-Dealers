@@ -12,7 +12,7 @@ const ShowCase = () => {
     <SimpleGrid
       columns={isMobile ? 1 : 2}
       spacing={10}
-      mx={isMobile ? "5" : "20"}
+      mx={isMobile ? "0" : "20"}
       //   my="10"
       my={isMobile ? "60px" : "80px"}
       justifyContent="center"
@@ -28,36 +28,75 @@ const ShowCase = () => {
         />
         <Box
           position="absolute"
-          top="12rem"
-          left="40%"
+          top="80%"
+          left="50%"
           color="white"
-          display="flex"
-          flexDirection="column"
-          gap="0px"
+          transform="translate(-50%, -50%)"
+          textAlign="center"
+          fontFamily="Rajdhani', sans-serif"
         >
           <Text
             // position="absolute"
-            fontWeight="bold"
+            fontWeight="semibold"
             fontSize="15px"
             margin="0"
           >
-            BMW 8 SERIES
+            The 2024 BMW 8 Series
           </Text>
-          <Text fontWeight="semibold" fontSize="25px" textAlign="center">
-            BMW 8 SERIES
+          <Text fontWeight="400" fontSize="25px" textAlign="center">
+            POWER AND PRESTIGE
+          </Text>
+          <Text
+            fontWeight="semibold"
+            fontSize="15px"
+            margin="0"
+            textDecoration="underline"
+            lineHeight="5px"
+          >
+            Learn More
           </Text>
         </Box>
       </Box>
-      <Box>
+      <Box position="relative">
         <Image
           src={BMW_x6}
           alt="BMW x6"
           height="350px"
           width={isMobile ? "100%" : "650px"}
-          //   objectFit="cover"
+          objectFit="cover"
         />
+        <Box
+          position="absolute"
+          top="80%"
+          left="50%"
+          color="white"
+          transform="translate(-50%, -50%)"
+          textAlign="center"
+          fontFamily="Rajdhani', sans-serif"
+        >
+          <Text
+            // position="absolute"
+            fontWeight="semibold"
+            fontSize="15px"
+            margin="0"
+          >
+            The 2024 BMW X6
+          </Text>
+          <Text fontWeight="400" fontSize="25px" textAlign="center">
+            POWER AND LUXURIOUS
+          </Text>
+          <Text
+            fontWeight="semibold"
+            fontSize="15px"
+            margin="0"
+            textDecoration="underline"
+            lineHeight="5px"
+          >
+            Learn More
+          </Text>
+        </Box>
       </Box>
-      <Box>
+      <Box position="relative">
         <Image
           src={BMW_ix}
           alt="BMW IX"
@@ -65,8 +104,38 @@ const ShowCase = () => {
           width={isMobile ? "100%" : "650px"}
           objectFit="cover"
         />
+        <Box
+          position="absolute"
+          top="80%"
+          left="50%"
+          color="white"
+          transform="translate(-50%, -50%)"
+          textAlign="center"
+          fontFamily="Rajdhani', sans-serif"
+        >
+          <Text
+            // position="absolute"
+            fontWeight="semibold"
+            fontSize="15px"
+            margin="0"
+          >
+            The 2024 BMW IX
+          </Text>
+          <Text fontWeight="400" fontSize="25px" textAlign="center">
+            AN ELECTRIC FUTURE
+          </Text>
+          <Text
+            fontWeight="semibold"
+            fontSize="15px"
+            margin="0"
+            textDecoration="underline"
+            lineHeight="5px"
+          >
+            Learn More
+          </Text>
+        </Box>
       </Box>
-      <Box>
+      <Box position="relative">
         <Image
           src={BMW_x5}
           alt="BMW X5"
@@ -74,6 +143,36 @@ const ShowCase = () => {
           width={isMobile ? "100%" : "650px"}
           objectFit="cover"
         />
+        <Box
+          position="absolute"
+          top="80%"
+          left="50%"
+          color="white"
+          transform="translate(-50%, -50%)"
+          textAlign="center"
+          fontFamily="Rajdhani', sans-serif"
+        >
+          <Text
+            // position="absolute"
+            fontWeight="semibold"
+            fontSize="15px"
+            margin="0"
+          >
+            The 2024 BMW X5
+          </Text>
+          <Text fontWeight="400" fontSize="25px" textAlign="center">
+            NEXT LEVEL LUXURY
+          </Text>
+          <Text
+            fontWeight="semibold"
+            fontSize="15px"
+            margin="0"
+            textDecoration="underline"
+            lineHeight="5px"
+          >
+            Learn More
+          </Text>
+        </Box>
       </Box>
     </SimpleGrid>
   );
