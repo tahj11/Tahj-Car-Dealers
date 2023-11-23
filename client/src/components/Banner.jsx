@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Flex, useMediaQuery } from "@chakra-ui/react";
+import { Box, Text, Flex, useMediaQuery, Center } from "@chakra-ui/react";
 import { FaArrowDown } from "react-icons/fa";
 
 const Banner = () => {
@@ -7,6 +7,7 @@ const Banner = () => {
 
   return (
     <Flex
+      // display="flex"
       h="70px"
       background="#f0fff0"
       alignItems="center"
@@ -16,10 +17,10 @@ const Banner = () => {
       overflowX={isMobile && "auto"}
       overflowY={isMobile && "hidden"}
     >
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
+      <Center
+        // display="flex"
+        // justifyContent="center"
+        // alignItems="center"
         gap="10px"
         // bg="gray"
       >
@@ -27,7 +28,7 @@ const Banner = () => {
           BMW M Line-Up
         </Text>
         <FaArrowDown style={{ fontSize: "15px", color: "#3457D5" }} />
-      </Box>
+      </Center>
       <Box
         display="flex"
         justifyContent="center"
