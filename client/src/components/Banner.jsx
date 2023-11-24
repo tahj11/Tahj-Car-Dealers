@@ -7,7 +7,6 @@ const Banner = () => {
 
   return (
     <Flex
-      // display="flex"
       h="70px"
       background="#f0fff0"
       alignItems="center"
@@ -17,25 +16,26 @@ const Banner = () => {
       overflowX={isMobile && "auto"}
       overflowY={isMobile && "hidden"}
     >
-      <Center
-        // display="flex"
-        // justifyContent="center"
-        // alignItems="center"
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
         gap="10px"
-        // bg="gray"
       >
-        <Text fontSize="m" textAlign="center">
+        <Text fontSize="m" my="auto">
           BMW M Line-Up
         </Text>
         <FaArrowDown style={{ fontSize: "15px", color: "#3457D5" }} />
-      </Center>
+      </Box>
       <Box
         display="flex"
         justifyContent="center"
         alignItems="center"
         gap="10px"
       >
-        <Text fontSize="m">History</Text>
+        <Text fontSize="m" my="auto">
+          History
+        </Text>
         <FaArrowDown style={{ fontSize: "15px", color: "#3457D5" }} />
       </Box>
       <Box
@@ -44,7 +44,9 @@ const Banner = () => {
         alignItems="center"
         gap="10px"
       >
-        <Text fontSize="m">Engineering</Text>
+        <Text fontSize="m" my="auto">
+          Engineering
+        </Text>
         <FaArrowDown style={{ fontSize: "15px", color: "#3457D5" }} />
       </Box>
       <Box
@@ -53,7 +55,9 @@ const Banner = () => {
         alignItems="center"
         gap="10px"
       >
-        <Text fontSize="m">Technology</Text>
+        <Text fontSize="m" my="auto">
+          Technology
+        </Text>
         <FaArrowDown style={{ fontSize: "15px", color: "#3457D5" }} />
       </Box>
       <Box
@@ -62,7 +66,9 @@ const Banner = () => {
         alignItems="center"
         gap="10px"
       >
-        <Text fontSize="m">Design</Text>
+        <Text fontSize="m" my="auto">
+          Design
+        </Text>
         <FaArrowDown style={{ fontSize: "15px", color: "#3457D5" }} />
       </Box>
       <Box
@@ -71,7 +77,9 @@ const Banner = () => {
         alignItems="center"
         gap="10px"
       >
-        <Text fontSize="m">Faqs</Text>
+        <Text fontSize="m" my="auto">
+          Faqs
+        </Text>
         <FaArrowDown style={{ fontSize: "15px", color: "#3457D5" }} />
       </Box>
     </Flex>
