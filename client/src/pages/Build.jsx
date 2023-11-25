@@ -15,7 +15,7 @@ const Build = () => {
   return (
     <Box>
       <Navbar />
-      <Flex flexDirection={{ base: "column" }} gap={{ base: "0px" }}>
+      <Flex flexDirection={{ base: "column", md: "row" }} gap={{ base: "0px" }}>
         <Box flex="2" bg={{ base: "#F0F0F0" }}>
           <Text
             as="h1"
@@ -47,7 +47,7 @@ const Build = () => {
             src={BMW_X5_2024}
             alt="X5"
             w="100%"
-            h="25rem"
+            h="29rem"
             objectFit="cover"
             position="relative"
           />
@@ -69,7 +69,7 @@ const Build = () => {
         style={{ marginTop: "40px", color: "		#989898", marginBottom: "0px" }}
       />
       <Box bg="	#F0F0F0">
-        <Flex flexDir={{ base: "column" }} gap={{ base: "30px" }}>
+        <Flex flexDir={{ base: "column", md: "row" }} gap={{ base: "30px" }}>
           <Box
             flex="3"
             display="flex"
@@ -113,7 +113,7 @@ const Build = () => {
         </Flex>
       </Box>
       <Box bg="">
-        <Flex flexDir={{ base: "column" }} gap={{ base: "30px" }}>
+        <Flex flexDir={{ base: "column", md: "row" }} gap={{ base: "30px" }}>
           <Box
             flex="3"
             display="flex"
@@ -158,7 +158,7 @@ const Build = () => {
         </Flex>
       </Box>
       <Box bg="#F0F0F0">
-        <Flex flexDir={{ base: "column" }} gap={{ base: "30px" }}>
+        <Flex flexDir={{ base: "column", md: "row" }} gap={{ base: "30px" }}>
           <Box
             flex="3"
             display="flex"
@@ -202,7 +202,7 @@ const Build = () => {
         </Flex>
       </Box>
       <Box bg="">
-        <Flex flexDir={{ base: "column" }} gap={{ base: "30px" }}>
+        <Flex flexDir={{ base: "column", md: "row" }} gap={{ base: "30px" }}>
           <Box
             flex="3"
             display="flex"
@@ -246,7 +246,7 @@ const Build = () => {
         </Flex>
       </Box>
       <Box bg="#F0F0F0">
-        <Flex flexDir={{ base: "column" }} gap={{ base: "30px" }}>
+        <Flex flexDir={{ base: "column", md: "row" }} gap={{ base: "30px" }}>
           <Box
             flex="3"
             display="flex"
@@ -290,7 +290,7 @@ const Build = () => {
         </Flex>
       </Box>
       <Box bg="">
-        <Flex flexDir={{ base: "column" }} gap={{ base: "30px" }}>
+        <Flex flexDir={{ base: "column", md: "row" }} gap={{ base: "30px" }}>
           <Box
             flex="3"
             display="flex"
@@ -334,7 +334,7 @@ const Build = () => {
         </Flex>
       </Box>
       <Box bg="#F0F0F0">
-        <Flex flexDir={{ base: "column" }} gap={{ base: "30px" }}>
+        <Flex flexDir={{ base: "column", md: "row" }} gap={{ base: "30px" }}>
           <Box
             flex="3"
             display="flex"
