@@ -10,9 +10,9 @@ const data = [
     to: "/",
   },
   {
-    id: "shopping",
-    label: "Shopping",
-    to: "/",
+    id: "build",
+    label: "Build Your Own",
+    to: "/build",
   },
 ];
 

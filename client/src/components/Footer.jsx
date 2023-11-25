@@ -31,7 +31,7 @@ const Footer = () => {
         {/* Navigation links for larger screens */}
         <VStack spacing={2}>
           <Text as="h5" fontSize="17px">
-            Links 1
+            TAHJ Services
           </Text>
           <Link href="#">Home</Link>
           <Link href="#">About</Link>
@@ -40,7 +40,7 @@ const Footer = () => {
         </VStack>
         <VStack spacing={2}>
           <Text as="h5" fontSize="17px">
-            Links 2
+            Partnerships
           </Text>
           <Link href="#">Home</Link>
           <Link href="#">About</Link>
@@ -49,7 +49,7 @@ const Footer = () => {
         </VStack>
         <VStack spacing={2}>
           <Text as="h5" fontSize="17px">
-            Links 3
+            Shopping Tools
           </Text>
           <Link href="#">Home</Link>
           <Link href="#">About</Link>

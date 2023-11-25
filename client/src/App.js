@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import Profile from "./pages/Profile";
+import Build from "./pages/Build";
 
 function App() {
   const user = useSelector((state) => state.auth.user);
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/build" element={<Build />} />
         <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
       </Routes>
     </Router>

@@ -10,6 +10,7 @@ import {
   MenuList,
   MenuItem,
   Menu,
+  Box,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
@@ -19,6 +20,7 @@ import { useMediaQuery } from "@chakra-ui/react";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
+import { FaCaretDown, FaChevronCircleDown } from "react-icons/fa";
 
 const CTA = "Login";
 
@@ -65,6 +67,11 @@ const Navbar = () => {
                 variant={"link"}
                 cursor={"pointer"}
                 minW={0}
+                // rightIcon={
+                //   <FaChevronCircleDown style={{ background: "transparent" }} />
+                // }
+                _hover={{ bg: "", color: "" }} // Adjust hover background and text color
+                // _active={{ bg: "teal.600" }} // Adjust active (pressed) background color
               >
                 <Avatar
                   size={"sm"}

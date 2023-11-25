@@ -57,7 +57,7 @@ const Profile = () => {
             ml="30px"
             border="1px solid 	#E0E0E0"
             borderRadius="5px"
-            w={{ base: "80%", md: "40%" }}
+            w={{ base: "80%", md: "90%" }}
             p={3}
             mt="1px"
           >
@@ -70,7 +70,7 @@ const Profile = () => {
             ml="30px"
             border="1px solid 	#E0E0E0"
             borderRadius="5px"
-            w={{ base: "80%", md: "40%" }}
+            w={{ base: "80%", md: "90%" }}
             p={3}
             mt="1px"
           >
@@ -83,7 +83,7 @@ const Profile = () => {
             ml="30px"
             border="1px solid 	#E0E0E0"
             borderRadius="5px"
-            w={{ base: "80%", md: "40%" }}
+            w={{ base: "80%", md: "90%" }}
             p={3}
             mt="1px"
           >
