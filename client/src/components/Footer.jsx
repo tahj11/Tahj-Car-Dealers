@@ -1,19 +1,9 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  Text,
-  Link,
-  VStack,
-  HStack,
-  IconButton,
-  useDisclosure,
-} from "@chakra-ui/react";
-import { FaChevronDown } from "react-icons/fa6";
+import { Box, Flex, Text, Link, VStack } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <Box as="footer" bg="#F8F8F8" color="black" p={4}>
+    <Box as="footer" bg="#F8F8F8" color="black" p={4} mb="20px">
       <Flex
         direction="row"
         justify="space-between"
@@ -57,7 +47,7 @@ const Footer = () => {
           <Link href="#">Contact</Link>
         </VStack>
       </Flex>
-      <Text>&copy; 2023 All rights reserved</Text>
+      <Text mt="5rem">&copy; 2023 All rights reserved</Text>
     </Box>
   );
 };

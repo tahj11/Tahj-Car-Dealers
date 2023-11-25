@@ -26,7 +26,7 @@ const Profile = () => {
           style={{
             borderTop: "1px solid #333",
             width: "50%",
-            margin: "20px auto",
+            margin: "0px auto",
           }}
         />
         <Box display="flex" justifyContent="center" mt="50px">

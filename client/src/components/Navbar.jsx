@@ -11,6 +11,13 @@ import {
   MenuItem,
   Menu,
   Box,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverBody,
+  VStack,
+  Text,
+  Image,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
@@ -20,7 +27,15 @@ import { useMediaQuery } from "@chakra-ui/react";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
-import { FaCaretDown, FaChevronCircleDown } from "react-icons/fa";
+import SVG_WHITE from "../assets/svg-white-background.jpg";
+import HURACAN_WHITE from "../assets/huracan-white-background.jpg";
+import HURACAN_BLU from "../assets/Huracan-Tecnica-Blu.webp";
+import BMW_X6_GREY from "../assets/x6-m-back.png";
+import BMW_X5_BLUE from "../assets/bmw-x5m-blue-white.png";
+import BMW_IX_NONE from "../assets/ix-no-back.png";
+import CAYENNE_NONE from "../assets/cayenne-back.jpg";
+import PANAMARA_NONE from "../assets/2023-Porsche-Panamera-4S.png";
+import GT3_NONE from "../assets/911-gt3.webp";
 
 const CTA = "Login";
 
@@ -35,7 +50,7 @@ const Navbar = () => {
   };
 
   return (
-    <chakra.header id="header">
+    <chakra.header id="header" bg="">
       <Flex
         w="100%"
         px={isMobile ? "5" : "20"}
@@ -47,12 +62,147 @@ const Navbar = () => {
         <Logo />
         {/* Nav Items */}
         {!isMobile && (
+          // <HStack as="nav" spacing="5">
+          //   {data.map((item, i) => (
+          //     <Link key={i} to={item.to}>
+          //       <Button background="transparent">{item.label}</Button>
+          //     </Link>
+          //   ))}
+          // </HStack>
           <HStack as="nav" spacing="5">
-            {data.map((item, i) => (
-              <Link key={i} to={item.to}>
-                <Button background="transparent">{item.label}</Button>
-              </Link>
-            ))}
+            <Link to="/">
+              <Button background="transparent">Home</Button>
+            </Link>
+
+            <Popover>
+              <PopoverTrigger>
+                <Button background="transparent">Vehicles</Button>
+              </PopoverTrigger>
+              <PopoverContent
+                position="fixed"
+                top="13px"
+                left="0"
+                right="0"
+                transform="translateX(-50%)"
+                width="49rem"
+                height="80vh"
+                borderRadius="2px"
+                overflowY="scroll"
+              >
+                <PopoverBody>
+                  <HStack mt="20px" ml="25px">
+                    {/* Your menu items go here */}
+                    <Text as="h5" fontWeight="500">
+                      LAMBORGHINI
+                    </Text>
+                  </HStack>
+                  <HStack ml="30px" mt="20px" spacing={20} cursor="pointer">
+                    <VStack>
+                      <Image
+                        src={SVG_WHITE}
+                        alt="svg"
+                        height="100px"
+                        objectFit="cover"
+                      />
+                      <Text fontWeight="500">SVG</Text>
+                    </VStack>
+                    <VStack>
+                      <Image
+                        src={HURACAN_WHITE}
+                        alt="svg"
+                        height="100px"
+                        objectFit="cover"
+                      />
+                      <Text fontWeight="500">HURACAN TECHNICA</Text>
+                    </VStack>
+                    <VStack>
+                      <Image
+                        src={HURACAN_BLU}
+                        alt="svg"
+                        height="100px"
+                        objectFit="cover"
+                      />
+                      <Text fontWeight="500">HURACAN EVO</Text>
+                    </VStack>
+                  </HStack>
+                  <HStack mt="20px" ml="25px">
+                    {/* Your menu items go here */}
+                    <Text as="h5" fontWeight="500">
+                      BMW
+                    </Text>
+                  </HStack>
+                  <HStack ml="30px" mt="20px" spacing={20} cursor="pointer">
+                    <VStack>
+                      <Image
+                        src={BMW_X5_BLUE}
+                        alt="svg"
+                        height="100px"
+                        // width="100px"
+                        objectFit="cover"
+                      />
+                      <Text fontWeight="500">X5 M</Text>
+                    </VStack>
+                    <VStack>
+                      <Image
+                        src={BMW_X6_GREY}
+                        alt="svg"
+                        height="100px"
+                        objectFit="cover"
+                      />
+                      <Text fontWeight="500">X6 M</Text>
+                    </VStack>
+                    <VStack>
+                      <Image
+                        src={BMW_IX_NONE}
+                        alt="svg"
+                        height="100px"
+                        objectFit="cover"
+                      />
+                      <Text fontWeight="500">IX</Text>
+                    </VStack>
+                  </HStack>
+                  <HStack mt="20px" ml="25px">
+                    {/* Your menu items go here */}
+                    <Text as="h5" fontWeight="500">
+                      PORSCHE
+                    </Text>
+                  </HStack>
+                  <HStack ml="30px" mt="20px" spacing={20} cursor="pointer">
+                    <VStack>
+                      <Image
+                        src={CAYENNE_NONE}
+                        alt="svg"
+                        height="100px"
+                        objectFit="cover"
+                      />
+                      <Text fontWeight="500">cayenne</Text>
+                    </VStack>
+                    <VStack>
+                      <Image
+                        src={PANAMARA_NONE}
+                        alt="svg"
+                        height="100px"
+                        objectFit="cover"
+                      />
+                      <Text fontWeight="500">PANAMARA 4S</Text>
+                    </VStack>
+                    <VStack>
+                      <Image
+                        src={GT3_NONE}
+                        alt="svg"
+                        height="100px"
+                        objectFit="cover"
+                      />
+                      <Text fontWeight="500">GT3 S</Text>
+                    </VStack>
+                  </HStack>
+                </PopoverBody>
+              </PopoverContent>
+            </Popover>
+
+            <Link to="/build">
+              <Button background="transparent">Build Your Own</Button>
+            </Link>
           </HStack>
         )}
 
