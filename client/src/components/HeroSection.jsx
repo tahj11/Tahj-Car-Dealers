@@ -55,7 +55,7 @@ const HeroSection = () => {
           borderRadius="2px"
           padding="30px"
           variant="solid"
-          mt={isMobile ? "1.5rem" : "4rem"}
+          mt={isMobile ? "1.5rem" : "8rem"}
         >
           Explore Models
         </Button>
