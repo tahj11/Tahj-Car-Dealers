@@ -97,7 +97,7 @@ const Navbar = () => {
                     </Text>
                   </HStack>
                   <HStack ml="30px" mt="20px" spacing={20} cursor="pointer">
-                    <VStack>
+                    <VStack onClick={() => navigate("/aventador")}>
                       <Image
                         src={SVG_WHITE}
                         alt="svg"
@@ -106,7 +106,7 @@ const Navbar = () => {
                       />
                       <Text fontWeight="500">SVG</Text>
                     </VStack>
-                    <VStack>
+                    <VStack onClick={() => navigate("/huracan")}>
                       <Image
                         src={HURACAN_WHITE}
                         alt="svg"
@@ -115,7 +115,7 @@ const Navbar = () => {
                       />
                       <Text fontWeight="500">HURACAN TECHNICA</Text>
                     </VStack>
-                    <VStack>
+                    <VStack onClick={() => navigate("/huracan")}>
                       <Image
                         src={HURACAN_BLU}
                         alt="svg"
@@ -132,7 +132,7 @@ const Navbar = () => {
                     </Text>
                   </HStack>
                   <HStack ml="30px" mt="20px" spacing={20} cursor="pointer">
-                    <VStack>
+                    <VStack onClick={() => navigate("/X5")}>
                       <Image
                         src={BMW_X5_BLUE}
                         alt="svg"
@@ -142,7 +142,7 @@ const Navbar = () => {
                       />
                       <Text fontWeight="500">X5 M</Text>
                     </VStack>
-                    <VStack>
+                    <VStack onClick={() => navigate("/X5")}>
                       <Image
                         src={BMW_X6_GREY}
                         alt="svg"
@@ -151,7 +151,7 @@ const Navbar = () => {
                       />
                       <Text fontWeight="500">X6 M</Text>
                     </VStack>
-                    <VStack>
+                    <VStack onClick={() => navigate("/X5")}>
                       <Image
                         src={BMW_IX_NONE}
                         alt="svg"
