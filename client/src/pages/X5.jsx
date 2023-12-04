@@ -18,12 +18,12 @@ const X5 = () => {
         />
         <Text
           as="h2"
-          color="black"
+          color="white"
           position="absolute"
-          top="40%"
+          top={{ base: "20%", md: "40%" }}
           left="10%"
           fontWeight="400"
-          fontSize="50px"
+          fontSize={{ base: "40px", md: "50px" }}
         >
           YOUR SLIEGH JUST <br />
           GOT AN UPGRADE

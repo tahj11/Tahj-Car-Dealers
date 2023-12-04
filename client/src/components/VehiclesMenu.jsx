@@ -24,7 +24,7 @@ const VehiclesMenu = () => {
         </Text>
       </HStack>
       <hr />
-      <HStack mt="" cursor="pointer" wrap="wrap">
+      <HStack mt="" cursor="pointer" spacing={10} wrap="wrap">
         <VStack onClick={() => navigate("/aventador")}>
           <Image src={SVG_WHITE} alt="svg" height="100px" objectFit="cover" />
           <Text fontWeight="500" fontSize="12px">
@@ -59,60 +59,96 @@ const VehiclesMenu = () => {
       <hr />
       <HStack mt="20px" ml="25px">
         {/* Your menu items go here */}
-        <Text as="h5" fontWeight="500">
+        <Text as="h5" fontWeight="500" fontSize="15px" ml="20px">
           BMW
         </Text>
       </HStack>
-      <HStack ml="30px" mt="20px" spacing={20} cursor="pointer">
+      <hr />
+      <HStack ml="30px" mt="20px" cursor="pointer" spacing={10} wrap="wrap">
         <VStack onClick={() => navigate("/X5")}>
           <Image
             src={BMW_X5_BLUE}
             alt="svg"
             height="100px"
-            // width="100px"
-            objectFit="cover"
+            width="100px"
+            objectFit="contain"
           />
-          <Text fontWeight="500">X5 M</Text>
+          <Text fontWeight="500" fontSize="12px">
+            X5 M
+          </Text>
         </VStack>
         <VStack onClick={() => navigate("/X5")}>
-          <Image src={BMW_X6_GREY} alt="svg" height="100px" objectFit="cover" />
-          <Text fontWeight="500">X6 M</Text>
+          <Image
+            src={BMW_X6_GREY}
+            alt="svg"
+            height="100px"
+            width="100px"
+            objectFit="contain"
+          />
+          <Text fontWeight="500" fontSize="12px">
+            X6 M
+          </Text>
         </VStack>
         <VStack onClick={() => navigate("/X5")}>
-          <Image src={BMW_IX_NONE} alt="svg" height="100px" objectFit="cover" />
-          <Text fontWeight="500">IX</Text>
+          <Image
+            src={BMW_IX_NONE}
+            alt="svg"
+            height="100px"
+            width="100px"
+            objectFit="contain"
+          />
+          <Text fontWeight="500" fontSize="12px">
+            IX
+          </Text>
         </VStack>
       </HStack>
+      <hr />
       <HStack mt="20px" ml="25px">
         {/* Your menu items go here */}
-        <Text as="h5" fontWeight="500">
+        <Text as="h5" fontWeight="500" fontSize="15px" ml="20px">
           PORSCHE
         </Text>
       </HStack>
-      <HStack ml="30px" mt="20px" spacing={20} cursor="pointer">
+      <hr />
+      <HStack ml="30px" mt="20px" spacing={10} cursor="pointer" wrap="wrap">
         <VStack>
           <Image
             src={CAYENNE_NONE}
             alt="svg"
             height="100px"
-            objectFit="cover"
+            width="100px"
+            objectFit="contain"
           />
-          <Text fontWeight="500">cayenne</Text>
+          <Text fontWeight="500" fontSize="12px">
+            CAYENNE
+          </Text>
         </VStack>
         <VStack>
           <Image
             src={PANAMARA_NONE}
             alt="svg"
             height="100px"
-            objectFit="cover"
+            width="100px"
+            objectFit="contain"
           />
-          <Text fontWeight="500">PANAMARA 4S</Text>
+          <Text fontWeight="500" fontSize="12px">
+            PANAMARA 4S
+          </Text>
         </VStack>
         <VStack>
-          <Image src={GT3_NONE} alt="svg" height="100px" objectFit="cover" />
-          <Text fontWeight="500">GT3 S</Text>
+          <Image
+            src={GT3_NONE}
+            alt="svg"
+            height="100px"
+            width="100px"
+            objectFit="contain"
+          />
+          <Text fontWeight="500" fontSize="12px">
+            GT3 S
+          </Text>
         </VStack>
       </HStack>
+      <hr />
     </Box>
   );
 };

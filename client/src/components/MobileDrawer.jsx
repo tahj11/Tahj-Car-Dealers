@@ -33,7 +33,7 @@ export default function MobileDrawer() {
     <Flex>
       {/* Menu Button */}
       {isMobile && (
-        <Button ref={btnRef} onClick={onOpen}>
+        <Button ref={btnRef} onClick={onOpen} bg="transparent">
           <IoMdMenu size="26px" />
         </Button>
       )}

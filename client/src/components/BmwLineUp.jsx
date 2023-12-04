@@ -133,7 +133,7 @@ const BmwLineUp = () => {
               alt="BMW M"
               fluid
               height="400px"
-              width="450px"
+              width="100%"
               objectFit="cover"
             />
             <Carousel.Caption>
