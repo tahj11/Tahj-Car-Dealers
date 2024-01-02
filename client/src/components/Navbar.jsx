@@ -203,6 +203,9 @@ const Navbar = () => {
             <Link to="/build">
               <Button background="transparent">Build Your Own</Button>
             </Link>
+            <Link to="/viewAll">
+              <Button background="transparent">Purchase Vehicle</Button>
+            </Link>
           </HStack>
         )}
 

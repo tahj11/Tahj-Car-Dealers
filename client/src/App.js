@@ -10,6 +10,7 @@ import Build from "./pages/Build";
 import X5 from "./pages/X5";
 import Aventador from "./pages/Aventador";
 import Huracan from "./pages/Huracan";
+import AllVehicle from "./pages/AllVehicle";
 
 function App() {
   const user = useSelector((state) => state.auth.user);
@@ -21,6 +22,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/build" element={<Build />} />
+        <Route path="/viewAll" element={<AllVehicle />} />
         <Route path="/X5" element={<X5 />} />
         <Route path="/aventador" element={<Aventador />} />
         <Route path="/huracan" element={<Huracan />} />

@@ -3,11 +3,28 @@ const mongoose = require("mongoose");
 const vehicleTypes = [
   "sedan",
   "motorcycle",
-  "suv",
+  "SUV",
   "pickup",
   "hatchback",
   "minivan",
   "coupe",
+];
+
+const location = [
+  "Manchester",
+  "Kingston",
+  "St. Catherine",
+  "Clarendon",
+  "St. Elizabeth",
+  "St. James",
+  "St. Ann",
+  "Hanover",
+  "Westmoreland",
+  "Trelawny",
+  "Portland",
+  "St. Mary",
+  "St. Thomas",
+  "St. Andrew",
 ];
 
 const VehicleSchema = new mongoose.Schema(
@@ -40,6 +57,14 @@ const VehicleSchema = new mongoose.Schema(
       type: String,
       enum: vehicleTypes,
       required: true,
+    },
+    location: {
+      type: String,
+      enum: location,
+      required: true,
+    },
+    color: {
+      type: String,
     },
   },
   {
